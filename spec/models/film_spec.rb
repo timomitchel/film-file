@@ -9,4 +9,18 @@ RSpec.describe Film do
       end
     end
   end
+  describe "Validations" do
+  it "is invalid without a title" do
+    film = Film.new(year: 2017, box_office_sales: 2)
+
+    expect(film).to_not be_valid
+    end
+  end
+  describe "Validations" do 
+    it "is invalid without a year" do 
+      film = Film.new(title: "Django", box_office_sales: 3)
+
+      expect(film).to_not be_valid
+    end
+  end
 end
