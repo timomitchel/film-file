@@ -8,8 +8,7 @@ RSpec.describe Film do
         expect(Film.total_box_office_sales).to eq(7)
       end
     end
-  end
-  describe "Class Methods" do 
+
     describe ".average_box_office_sales" do 
       it "returns average box office sales for all films" do 
         Film.create(title: "Fargo", year: 2017, box_office_sales: 3)
